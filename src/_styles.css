@@ -1,0 +1,129 @@
+/* Just some base styles not needed for example to function */
+
+/* CSS Tree menu styles */
+ul.dv-tree
+{
+	padding: 0 0 0 30px;
+	    -webkit-padding-start:5px;
+}
+	li
+	{
+		position: relative;
+		margin-left: 0px;
+		list-style: none;
+	}
+	li.file-dv
+	{
+		margin-left: -1px !important;
+	}
+		li.file-dv a
+		{
+			background: url(document.png) 0 0 no-repeat;
+			color: #fff;
+			padding-left: 21px;
+			text-decoration: none;
+			display: block;
+		}
+		li.file-dv a[href *= '.pdf']	{ background: url(document.png) 0 0 no-repeat; }
+		li.file-dv a[href *= '.html']	{ background: url(document.png) 0 0 no-repeat; }
+		li.file-dv a[href $= '.css']	{ background: url(document.png) 0 0 no-repeat; }
+		li.file-dv a[href $= '.js']		{ background: url(document.png) 0 0 no-repeat; }
+	li input
+	{
+		position: absolute;
+		left: 0;
+		margin-left: 0;
+		opacity: 0;
+		z-index: 2;
+		cursor: pointer;
+		height: 1em;
+		width: 1em;
+		top: 0;
+	}
+		li input + ul
+		{
+			background: url(toggle-small-expand.png) 40px 0 no-repeat;
+			margin: -0.938em 0 0 -44px; /* 15px */
+			height: 1em;
+		}
+		li input + ul > li { display: none; margin-left: -14px !important; padding-left: 1px; }
+	li label
+	{
+		background: url(folder-horizontal.png) 15px 1px no-repeat;
+		cursor: pointer;
+		display: block;
+		padding-left: 37px;
+	}
+
+	li input:checked + ul
+	{
+		background: url(toggle-small.png) 40px 5px no-repeat;
+		margin: -1.25em 0 0 -44px; /* 20px */
+		padding: 1.563em 0 0 80px;
+		height: auto;
+	}
+		li input:checked + ul > li { display: block; margin: 0 0 0.125em;  /* 2px */}
+		li input:checked + ul > li:last-child { margin: 0 0 0.063em; /* 1px */ }
+		
+		
+#tabs-container {
+padding: 20px;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.5;
+font-size: 14px;        
+}
+
+.tabs-menu {
+    height: 30px;
+    float: left;
+    clear: both;
+		-webkit-margin-after: 00px;
+}
+
+.tabs-menu li {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 10px;
+    background-color: #ccc;
+    border-top: 1px solid #d4d4d1;
+    border-right: 1px solid #d4d4d1;
+    border-left: 1px solid #d4d4d1;
+}
+
+.tabs-menu li.current {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 5;
+}
+
+.tabs-menu li a {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none; 
+
+}
+
+.tabs-menu .current a {
+    color: #2e7da3;
+}
+
+.tab {
+    border: 1px solid #d4d4d1;
+    background-color: #fff;
+    float: left;
+    margin-bottom: 20px;
+    width: auto;
+}
+
+.tab-content {
+    width:280px;
+	padding:10px;
+    display: none;
+}
+
+#tab-1 {
+ display: block;   
+}
